@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavana's Fashion Studio</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #bdbdca;
+            text-align: center;
+        }
+        p{
+            font-size: 2em;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://i.pinimg.com/originals/f9/b9/a0/f9b9a060f821bf24ed932d0c076565e2.jpg') CENTER/COVER;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(17, 12, 12);
+            text-shadow: 2px 2px 5px rgba(250, 249, 249, 0.5);
+        }
+
+        .hero-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero h1 {
+            color: #17090e; /* Adding custom text color for title */
+            font-size: 4em;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #c1c6c2;
+            color: rgb(241, 106, 106);
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #111010;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            padding: 50px 0;
+            background: rgb(20, 18, 18);
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-item img, .gallery-item video {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item img:hover, .gallery-item video:hover {
+            transform: scale(1.1);
+        }
+
+        /* About, Knitwear, Crafts & Children's Fashion Sections */
+        #about, #knitwear, #crafts, #childrens-fashion, #contact {
+            padding: 50px 0;
+            background: #333;
+            color: rgb(205, 230, 207);
+        }
+
+        /* Specific Styles for Each Section */
+        section {
+            margin-bottom: 30px;
+        }
+
+        /* Styling for the text in these sections */
+        h2 {
+            font-size: 2em;
+            color: #be5717;
+            font-style: oblique;
+        }
+
+        /* Craft Section Gallery */
+        .gallery-container img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".gallery-item img");
+
+            images.forEach(img => {
+                img.addEventListener("mouseenter", () => {
+                    img.style.animation = "shake 0.5s ease-in-out infinite";
+                });
+
+                img.addEventListener("mouseleave", () => {
+                    img.style.animation = "";
+                });
+            });
+        });
+
+        /* CSS Animation */
+        const style = document.createElement("style");
+        style.innerHTML = `
+            @keyframes shake {
+                0% { transform: rotate(0); }
+                25% { transform: rotate(2deg); }
+                50% { transform: rotate(-2deg); }
+                75% { transform: rotate(2deg); }
+                100% { transform: rotate(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+
+            
+            <h1>Kavana's Fashion Studio</h1>
+            <h2>ULTIMATE FASHION PORTFOLIO</h2>
+            <p>Luxury, Creativity & Wearable Art</p>
+            <a href="#gallery" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Kavana</h2>
+        <p>Bachelor's in Fashion Design from NIFT Bombay (2023). Passionate about luxury fashion and creating timeless wearable art.</p>
+        <p>Experienced in designing, merchandising, garment construction, and Adobe Photoshop.</p>
+      
+    </section>
+
+    <!-- Knitwear Section -->
+    <section id="knitwear">
+        <h2>Knitwear Collection</h2>
+        <p>Explore my unique knitwear pieces designed with intricate techniques and luxurious materials.</p>
+        <div class="gallery-container">
+            <img src="https://i.pinimg.com/originals/6e/24/76/6e247609b5f71c1bc6cec4a11ea1b2f6.png" alt="Knitwear Design">
+            <img src="http://www.catwalkyourself.com/wp-content/uploads/2014/10/catwalk_yourself_blog_knitwear_in_fashion_3-679x1024.jpg" alt="Knitwear Design">
+            <img src="https://i.pinimg.com/736x/dc/1b/72/dc1b72ea5c3392aa3a8c80dd5034c298--designer-knitwear-knit-stitches.jpg" alt="Knitwear Design">
+            <img src="https://i.pinimg.com/originals/5c/ad/da/5caddad8a22a02c9ebadf5f8e07d2892.png" alt="Knitwear Design">
+        </div>
+    </section>
+   
+    
+
+    <!-- Crafts Section -->
+    <section id="crafts">
+        <h2>Crafts and Surface Development</h2>
+        <p>Innovative craftsmanship and surface development techniques that bring art to life.</p>
+        <div class="gallery-container">
+            <img src="https://i.pinimg.com/originals/d2/97/bc/d297bc18eb8d6b5138e35d20c361fbbf.png" alt="Craft Design">
+            <img src="https://i.pinimg.com/originals/2e/d0/d4/2ed0d4c49347ef4e16fe88a3927dfa79.png" alt="Craft Design">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.pAQy3SNJXHePjpfWaajKQQHaEK&pid=Api&P=0&h=180" alt="Craft Design">
+            <img src="https://wallpaperaccess.com/full/6097717.jpg" alt="Craft Design">
+        </div>
+    </section>
+
+    <!-- Children’s Fashion Section -->
+    <section id="childrens-fashion">
+        <h2>Children’s Fashion</h2>
+        <p>Designing playful yet elegant clothing for children, with an emphasis on comfort and style.</p>
+        <div class="gallery-container">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.FtBxnKN0s08YPAgFBOvpswHaFL&pid=Api&P=0&h=180" alt="Children's Fashion Design">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.60RwER98LdK1AeRuRXCffAHaEo&pid=Api&P=0&h=180" alt="Children's Fashion Design">
+            <img src="https://stunningplans.com/wp-content/uploads/2020/02/kids-fashion-design-beautiful-dolce-amp-gabbana-children-new-collection-of-kids-fashion-design.jpg" alt="Children's Fashion Design">
+            <img src="https://i.pinimg.com/originals/90/fd/8d/90fd8d86082de583515b58a184de1df8.jpg" alt="Children's Fashion Design">
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>My Designs</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.1HO4yakLNYTrPqET-AlcvQHaEJ&pid=Api&P=0&h=180" alt="Luxury Fashion Design">
+                <img src="https://i.pinimg.com/originals/8a/a4/44/8aa444f84c0288d1c1c42e39aaba6251.jpg" alt="Luxury Fashion Design">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/premium-photo/caftan-traditional-moroccan-style-bustier-without-sleeves-haute-couture-luxury-fashion-design-p1_945627-428.jpg" alt="Fashion Show">
+                <img src="https://i.pinimg.com/736x/86/89/c4/8689c4d09a38acce7a9479a6528efb17--womens-western-clothing-western-apparel.jpg" alt="Fashion Show">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img.freepik.com/premium-photo/caftan-traditionnel-morrocan-style-corsetstyle-dress-haute-couture-luxury-fashion-design-elega_1001076-1069.jpg" alt="Elegant Dress">
+                <img src="https://i.pinimg.com/736x/91/e4/2f/91e42f68e2db96202ca6e76f5bb77ceb.jpg" alt="Elegant Dress">
+                <img src="http://www.fashionfoody.com/wp-content/uploads/2018/03/Anarkali-Gowns.jpg" alt="Elegant Dress">
+                <img src="https://i.pinimg.com/originals/87/91/bc/8791bc0e48edee895b103696317745bf.jpg" alt="Elegant Dress">
+                <img src="https://i.pinimg.com/736x/1e/09/b5/1e09b564578024e0c5f4fd36e60d641f--western-outfits-western-show-clothes.jpg" alt="Elegant Dress">
+            </div>
+        </div>           asian paints iavaga p
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: kavana@example.com | Instagram: @kavana_fashion</p>
+    </section>
+
+</body>
+</html>
